@@ -1,8 +1,8 @@
 <?php
 
-namespace DigitalCreative\SimpleMetricsWidget\Widgets;
+namespace DigitalCreative\ValueWidget\Widgets;
 
-use DigitalCreative\NovaBi\Widgets\Value;
+use DigitalCreative\NovaDashboard\ValueResult as BaseValueResult;
 
 /**
  * @method self amount(int $int)
@@ -12,7 +12,7 @@ use DigitalCreative\NovaBi\Widgets\Value;
  * @property int currentValue
  * @property int|null previousValue
  */
-class SimpleMetricsValue extends Value
+class ValueResult extends BaseValueResult
 {
 
     protected function previousValuePercentage(): ?float

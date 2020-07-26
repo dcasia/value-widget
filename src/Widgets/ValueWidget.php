@@ -1,15 +1,15 @@
 <?php
 
-namespace DigitalCreative\SimpleMetricsWidget\Widgets;
+namespace DigitalCreative\ValueWidget\Widgets;
 
-use DigitalCreative\NovaBi\Widgets\Widget;
+use DigitalCreative\NovaDashboard\Widget;
 use Illuminate\Support\Str;
 use Laravel\Nova\Fields\KeyValue;
 use Laravel\Nova\Fields\Number;
 use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Textarea;
 
-abstract class SimpleMetricsWidget extends Widget
+abstract class ValueWidget extends Widget
 {
 
     public const OPTION_PREFIX = 'prefix';
@@ -29,10 +29,10 @@ abstract class SimpleMetricsWidget extends Widget
 
     public function component(): string
     {
-        return 'simple-metrics-widget';
+        return 'value-widget';
     }
 
-    public function options(): array
+    public function fields(): array
     {
 
         return [

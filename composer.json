@@ -1,5 +1,5 @@
 {
-    "name": "digital-creative/simple-metrics-widget",
+    "name": "digital-creative/value-widget",
     "description": "A Laravel Nova tool.",
     "keywords": [
         "laravel",
@@ -11,13 +11,13 @@
     },
     "autoload": {
         "psr-4": {
-            "DigitalCreative\\SimpleMetricsWidget\\": "src/"
+            "DigitalCreative\\ValueWidget\\": "src/"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "DigitalCreative\\SimpleMetricsWidget\\ToolServiceProvider"
+                "DigitalCreative\\ValueWidget\\ToolServiceProvider"
             ]
         }
     },

@@ -2,8 +2,7 @@
 
     <widget :meta="meta">
 
-        <template
-            v-slot="{ value: { currentValue, previousValue, previousValuePercentage, isPositive } }">
+        <template v-slot="{ value: { currentValue, previousValue, previousValuePercentage, isPositive } }">
 
             <div class="flex flex-col h-full justify-between leading-none">
 
@@ -27,8 +26,7 @@
 
                 <div class="flex mt-2 items-center text-80 font-bold">
 
-                    <div
-                        v-if="previousValuePercentage === 0 && currentValue !== undefined && previousValue !== undefined">
+                    <div v-if="previousValuePercentage === 0 && currentValue !== undefined && previousValue !== undefined">
                         {{ options.labels['No Increase'] }}
                     </div>
 
@@ -38,15 +36,12 @@
 
                             <div class="flex items-center">
 
-                                <svg v-if="isPositive" width="20" height="12"
-                                     class="rotate-180 text-success fill-current mr-2">
-                                    <path
-                                        d="M2 3a1 1 0 0 0-2 0v8a1 1 0 0 0 1 1h8a1 1 0 0 0 0-2H3.414L9 4.414l3.293 3.293a1 1 0 0 0 1.414 0l6-6A1 1 0 0 0 18.293.293L13 5.586 9.707 2.293a1 1 0 0 0-1.414 0L2 8.586V3z"></path>
+                                <svg v-if="isPositive" width="20" height="12" class="rotate-180 text-success fill-current mr-2">
+                                    <path d="M2 3a1 1 0 0 0-2 0v8a1 1 0 0 0 1 1h8a1 1 0 0 0 0-2H3.414L9 4.414l3.293 3.293a1 1 0 0 0 1.414 0l6-6A1 1 0 0 0 18.293.293L13 5.586 9.707 2.293a1 1 0 0 0-1.414 0L2 8.586V3z"></path>
                                 </svg>
 
                                 <svg v-else width="20" height="12" class="text-danger fill-current mr-2">
-                                    <path
-                                        d="M2 3a1 1 0 0 0-2 0v8a1 1 0 0 0 1 1h8a1 1 0 0 0 0-2H3.414L9 4.414l3.293 3.293a1 1 0 0 0 1.414 0l6-6A1 1 0 0 0 18.293.293L13 5.586 9.707 2.293a1 1 0 0 0-1.414 0L2 8.586V3z"></path>
+                                    <path d="M2 3a1 1 0 0 0-2 0v8a1 1 0 0 0 1 1h8a1 1 0 0 0 0-2H3.414L9 4.414l3.293 3.293a1 1 0 0 0 1.414 0l6-6A1 1 0 0 0 18.293.293L13 5.586 9.707 2.293a1 1 0 0 0-1.414 0L2 8.586V3z"></path>
                                 </svg>
 
                                 {{ previousValuePercentage }}%
@@ -102,6 +97,7 @@
     // }
 
     export default {
+        name: 'ValueWidget',
         props: {
             meta: { type: Object, default: null },
             card: { type: Object, default: null },

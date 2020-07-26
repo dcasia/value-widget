@@ -1,6 +1,6 @@
 <?php
 
-namespace DigitalCreative\SimpleMetricsWidget;
+namespace DigitalCreative\ValueWidget;
 
 use Illuminate\Support\ServiceProvider;
 use Laravel\Nova\Nova;
@@ -15,7 +15,7 @@ class ToolServiceProvider extends ServiceProvider
     public function boot()
     {
         Nova::serving(function () {
-            Nova::script('simple-metrics-widget', __DIR__ . '/../dist/js/widget.js');
+            Nova::script('value-widget', __DIR__ . '/../dist/js/widget.js');
         });
     }
 }

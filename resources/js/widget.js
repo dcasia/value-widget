@@ -1,8 +1,8 @@
-import SimpleMetricsWidget from './components/SimpleMetricsWidget'
+import Widget from './components/Widget'
 
 Nova.booting((Vue, router, store) => {
 
-    Vue.component('simple-metrics-widget', SimpleMetricsWidget)
+    Vue.component('value-widget', Widget)
 
 })
 
