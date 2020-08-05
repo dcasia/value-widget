@@ -6,8 +6,8 @@
 
             <div class="flex flex-col h-full justify-between leading-none">
 
-                <div class="text-base text-80 font-bold">
-                    {{ options.title }}
+                <div class="text-base text-80 font-bold" v-if="options.widget_title">
+                    {{ options.widget_title }}
                 </div>
 
                 <div class="flex flex-col text-4xl justify-center mt-2">
