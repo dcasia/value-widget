@@ -101,14 +101,14 @@
         props: {
             meta: { type: Object, default: null },
             card: { type: Object, default: null },
-            coordinates: { type: Object }
+            coordinates: { type: Object },
         },
         computed: {
+            namespace() {
+                return [ this.meta.dashboardKey, this.meta.viewKey, this.meta.widgetKey, this.meta.id ].join('/')
+            },
             options() {
-                if (this.meta) {
-                    return this.meta.options
-                }
-                return this.card.options
+                return this.$store.getters[ `${ this.namespace }/options` ]
             }
         }
     }
