@@ -13,6 +13,7 @@ abstract class ValueWidget extends Widget
 
     public const PREFIX = 'prefix';
     public const SUFFIX = 'suffix';
+    public const FORMAT = 'format';
     public const DECIMAL = 'decimal';
     public const NO_CURRENT_DATA = 'no_current_data';
 
@@ -32,6 +33,9 @@ abstract class ValueWidget extends Widget
     public function widgetFields()
     {
         return WidgetOptionTab::make(__('Widget Settings'), [
+            self::FORMAT => static function (string $attribute) {
+                return Text::make(__('Format'), $attribute);
+            },
             self::PREFIX => static function (string $attribute) {
                 return Text::make(__('Prefix'), $attribute);
             },

@@ -14,7 +14,7 @@
 
                     <div class="flex items-center whitespace-no-wrap">
 
-                        {{ options.prefix }} {{ currentValue ? currentValue : options.no_current_data }}
+                        {{ options.prefix }} {{ currentValue ? formattedValue(currentValue, options.format) : options.no_current_data }}
 
                         <span v-if="options.suffix" class="ml-2 text-sm font-bold text-80">
                             {{ options.suffix }}
@@ -101,7 +101,7 @@
         props: {
             meta: { type: Object, default: null },
             card: { type: Object, default: null },
-            coordinates: { type: Object },
+            coordinates: { type: Object }
         },
         computed: {
             namespace() {
@@ -109,6 +109,15 @@
             },
             options() {
                 return this.$store.getters[ `${ this.namespace }/options` ]
+            }
+        },
+        methods: {
+            formattedValue(value, format) {
+                if (format == null) {
+                    return value
+                }
+
+                return Nova.formatNumber(String(value), format)
             }
         }
     }
