@@ -1,12 +1,12 @@
 # Nova Value Widget
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/digital-creative/nova-welcome-card)](https://packagist.org/packages/digital-creative/nova-welcome-card)
-[![Total Downloads](https://img.shields.io/packagist/dt/digital-creative/nova-welcome-card)](https://packagist.org/packages/digital-creative/nova-welcome-card)
-[![License](https://img.shields.io/packagist/l/digital-creative/nova-welcome-card)](https://github.com/dcasia/nova-welcome-card/blob/main/LICENSE)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/digital-creative/value-widget)](https://packagist.org/packages/digital-creative/value-widget)
+[![Total Downloads](https://img.shields.io/packagist/dt/digital-creative/value-widget)](https://packagist.org/packages/digital-creative/value-widget)
+[![License](https://img.shields.io/packagist/l/digital-creative/value-widget)](https://github.com/dcasia/value-widget/blob/main/LICENSE)
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dcasia/value-widget/main/screenshots/dark.png">
-  <img alt="Nova Welcome Card in Action" src="https://raw.githubusercontent.com/dcasia/value-widget/main/screenshots/light.png">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dcasia/value-widget/nova-4/screenshots/dark.png">
+  <img alt="Nova Welcome Card in Action" src="https://raw.githubusercontent.com/dcasia/value-widget/nova-4/screenshots/light.png">
 </picture>
 
 A simple widget for laravel [nova-dashboard](https://github.com/dcasia/value-widget)
