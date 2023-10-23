@@ -5,11 +5,11 @@
 [![License](https://img.shields.io/packagist/l/digital-creative/value-widget)](https://github.com/dcasia/value-widget/blob/main/LICENSE)
 
 <picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dcasia/value-widget/nova-4/screenshots/dark.png">
-  <img alt="Nova Welcome Card in Action" src="https://raw.githubusercontent.com/dcasia/value-widget/nova-4/screenshots/light.png">
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/dcasia/value-widget/main/screenshots/dark.png">
+  <img alt="Nova Welcome Card in Action" src="https://raw.githubusercontent.com/dcasia/value-widget/main/screenshots/light.png">
 </picture>
 
-A simple widget for laravel [nova-dashboard](https://github.com/dcasia/value-widget)
+A simple widget for laravel [nova-dashboard](https://github.com/dcasia/nova-dashboard).
 
 # Installation
 
@@ -66,4 +66,4 @@ Please give a ⭐️ if this project helped you!
 
 ## License
 
-The MIT License (MIT). Please see [License File](https://raw.githubusercontent.com/dcasia/nova-welcome-card/master/LICENSE) for more information.
+The MIT License (MIT). Please see [License File](https://raw.githubusercontent.com/dcasia/value-widget/master/LICENSE) for more information.
