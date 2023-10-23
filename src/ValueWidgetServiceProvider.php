@@ -14,8 +14,8 @@ class ValueWidgetServiceProvider extends ServiceProvider
     {
         Nova::serving(static function (ServingNova $event): void {
 
-            Nova::script('value-icon-widget', __DIR__ . '/../dist/js/card.js');
-            Nova::style('value-icon-widget', __DIR__ . '/../dist/css/card.css');
+            Nova::script('value-widget', __DIR__ . '/../dist/js/card.js');
+            Nova::style('value-widget', __DIR__ . '/../dist/css/card.css');
 
         });
     }
