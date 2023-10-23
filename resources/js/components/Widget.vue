@@ -1,116 +1,52 @@
 <template>
 
-    <widget :meta="meta">
+    <Card class="value-icon-widget flex justify-center py-4"
+          :style="{
+            '--background-color-dark': card.backgroundColorDark,
+            '--text-color-dark': card.textColorDark,
+            '--background-color-light': card.backgroundColorLight,
+            '--text-color-light': card.textColorLight,
+          }">
 
-        <template v-slot="{ value: { currentValue, previousValue, previousValuePercentage, isPositive } }">
+        <LoadingView :loading="isLoading" class="flex flex-col justify-center items-center">
 
-            <div class="flex flex-col h-full justify-between leading-none">
+            <template v-if="card.icon.trim().startsWith('<svg')">
+                <div v-html="card.icon"/>
+            </template>
 
-                <div class="text-base text-80 font-bold" v-if="options.widget_title">
-                    {{ options.widget_title }}
-                </div>
+            <Icon v-else :type="card.icon"/>
 
-                <div class="flex flex-col text-4xl justify-center mt-2">
+            <div class="text-xl value-icon-widget__title">{{ card.title }}</div>
+            <div class="text-2xl font-bold value-icon-widget__value">{{ card.value }}</div>
 
-                    <div class="flex items-center whitespace-no-wrap">
+        </LoadingView>
 
-                        {{ options.prefix }} {{ currentValue ? currentValue : options.no_current_data }}
-
-                        <span v-if="options.suffix" class="ml-2 text-sm font-bold text-80">
-                            {{ options.suffix }}
-                        </span>
-
-                    </div>
-
-                </div>
-
-                <div class="flex mt-2 items-center text-80 font-bold">
-
-                    <div v-if="previousValuePercentage === 0 && currentValue !== undefined && previousValue !== undefined">
-                        {{ options.labels['No Increase'] }}
-                    </div>
-
-                    <template v-else-if="previousValuePercentage">
-
-                        <tooltip trigger="hover" class="cursor-pointer">
-
-                            <div class="flex items-center">
-
-                                <svg v-if="isPositive" width="20" height="12" class="rotate-180 text-success fill-current mr-2">
-                                    <path d="M2 3a1 1 0 0 0-2 0v8a1 1 0 0 0 1 1h8a1 1 0 0 0 0-2H3.414L9 4.414l3.293 3.293a1 1 0 0 0 1.414 0l6-6A1 1 0 0 0 18.293.293L13 5.586 9.707 2.293a1 1 0 0 0-1.414 0L2 8.586V3z"></path>
-                                </svg>
-
-                                <svg v-else width="20" height="12" class="text-danger fill-current mr-2">
-                                    <path d="M2 3a1 1 0 0 0-2 0v8a1 1 0 0 0 1 1h8a1 1 0 0 0 0-2H3.414L9 4.414l3.293 3.293a1 1 0 0 0 1.414 0l6-6A1 1 0 0 0 18.293.293L13 5.586 9.707 2.293a1 1 0 0 0-1.414 0L2 8.586V3z"></path>
-                                </svg>
-
-                                {{ previousValuePercentage }}%
-                                {{ isPositive ? options.labels['Increase'] : options.labels['Decrease'] }}
-
-                            </div>
-
-                            <tooltip-content slot="content">
-
-                                <div class="flex">
-
-                                    {{ options.labels['Previous Value'] }} {{ options.prefix }} {{ previousValue }}
-
-                                    <span v-if="options.suffix">{{ options.suffix }}</span>
-
-                                </div>
-
-                            </tooltip-content>
-
-                        </tooltip>
-
-
-                    </template>
-
-                    <div v-else-if="currentValue === undefined">
-                        {{ options.labels['No Current Data'] }}
-                    </div>
-
-                    <div v-else>
-                        {{ options.labels['No Prior Data'] }}
-                    </div>
-
-                </div>
-
-            </div>
-
-        </template>
-
-    </widget>
+    </Card>
 
 </template>
 
 <script>
 
-    // interface Meta {
-    // }
-
-    // interface Coordinates {
-    //     width: number,
-    //     height: number,
-    //     x: number,
-    //     y: number
-    // }
-
     export default {
-        name: 'ValueWidget',
-        props: {
-            meta: { type: Object, default: null },
-            card: { type: Object, default: null },
-            coordinates: { type: Object },
-        },
-        computed: {
-            namespace() {
-                return [ this.meta.dashboardKey, this.meta.viewKey, this.meta.widgetKey, this.meta.id ].join('/')
-            },
-            options() {
-                return this.$store.getters[ `${ this.namespace }/options` ]
-            }
-        }
+        props: { card: Object },
     }
 
 </script>
+
+<style lang="scss">
+
+    .dark .value-icon-widget {
+        background-color: var(--background-color-dark, rgb(var(--colors-gray-800)));
+        color: var(--text-color-dark);
+    }
+
+    .value-icon-widget {
+        background-color: var(--background-color-light, white);
+        color: var(--text-color-light);
+
+        svg {
+            @apply w-14 h-14 mb-1;
+        }
+    }
+
+</style>
