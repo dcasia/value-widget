@@ -1,13 +1,21 @@
 {
     "name": "digital-creative/value-widget",
-    "description": "A Laravel Nova tool.",
+    "description": "A basic widget for laravel nova-dashboard.",
     "keywords": [
         "laravel",
-        "nova"
+        "nova",
+        "nova-dashboard",
+        "widget"
+    ],
+    "authors": [
+        {
+            "name": "Rafael Milewski"
+        }
     ],
     "license": "MIT",
     "require": {
-        "php": ">=7.1.0"
+        "php": ">=8.1",
+        "laravel/nova": "^4.0"
     },
     "autoload": {
         "psr-4": {
@@ -17,7 +25,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "DigitalCreative\\ValueWidget\\ToolServiceProvider"
+                "DigitalCreative\\ValueWidget\\ValueWidgetServiceProvider"
             ]
         }
     },
