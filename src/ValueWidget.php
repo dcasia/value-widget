@@ -8,7 +8,7 @@ use DigitalCreative\NovaDashboard\Card\Widget;
 
 abstract class ValueWidget extends Widget
 {
-    public $component = 'value-icon-widget';
+    public $component = 'value-widget';
 
     public $width = self::ONE_QUARTER_WIDTH;
 
