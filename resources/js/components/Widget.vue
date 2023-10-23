@@ -1,6 +1,6 @@
 <template>
 
-    <Card class="value-icon-widget flex justify-center py-4"
+    <Card class="value-widget flex justify-center py-4"
           :style="{
             '--background-color-dark': card.backgroundColorDark,
             '--text-color-dark': card.textColorDark,
@@ -16,8 +16,8 @@
 
             <Icon v-else :type="card.icon"/>
 
-            <div class="text-xl value-icon-widget__title">{{ card.title }}</div>
-            <div class="text-2xl font-bold value-icon-widget__value">{{ card.value }}</div>
+            <div class="text-xl value-widget__title">{{ card.title }}</div>
+            <div class="text-2xl font-bold value-widget__value">{{ card.value }}</div>
 
         </LoadingView>
 
@@ -35,12 +35,12 @@
 
 <style lang="scss">
 
-    .dark .value-icon-widget {
+    .dark .value-widget {
         background-color: var(--background-color-dark, rgb(var(--colors-gray-800)));
         color: var(--text-color-dark);
     }
 
-    .value-icon-widget {
+    .value-widget {
         background-color: var(--background-color-light, white);
         color: var(--text-color-light);
 
