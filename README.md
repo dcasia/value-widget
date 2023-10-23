@@ -66,4 +66,4 @@ Please give a ⭐️ if this project helped you!
 
 ## License
 
-The MIT License (MIT). Please see [License File](https://raw.githubusercontent.com/dcasia/value-widget/master/LICENSE) for more information.
+The MIT License (MIT). Please see [License File](https://raw.githubusercontent.com/dcasia/value-widget/main/LICENSE) for more information.
