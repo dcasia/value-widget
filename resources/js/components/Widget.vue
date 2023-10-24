@@ -1,6 +1,6 @@
 <template>
 
-    <Card class="value-widget flex justify-center py-4"
+    <Card class="value-widget flex justify-center py-4 overflow-hidden"
           :style="{
             '--background-color-dark': card.backgroundColorDark,
             '--text-color-dark': card.textColorDark,
@@ -8,7 +8,7 @@
             '--text-color-light': card.textColorLight,
           }">
 
-        <LoadingView :loading="isLoading" class="flex flex-col justify-center items-center">
+        <LoadingView :loading="isLoading" class="flex flex-col justify-center items-center text-center">
 
             <template v-if="card.icon.trim().startsWith('<svg')">
                 <div v-html="card.icon"/>
