@@ -10,8 +10,6 @@ abstract class ValueWidget extends Widget
 {
     public $component = 'value-widget';
 
-    public $width = self::ONE_QUARTER_WIDTH;
-
     public function title(string $title): self
     {
         return $this->withMeta([ 'title' => $title ]);
