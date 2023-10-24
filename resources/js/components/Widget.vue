@@ -17,7 +17,7 @@
             <Icon v-else :type="card.icon"/>
 
             <div class="text-xl value-widget__title">{{ card.title }}</div>
-            <div class="text-2xl font-bold value-widget__value">{{ card.value }}</div>
+            <div class="text-2xl font-bold value-widget__value">{{ value }}</div>
 
         </LoadingView>
 
